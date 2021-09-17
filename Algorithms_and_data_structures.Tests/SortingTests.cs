@@ -89,5 +89,21 @@ namespace Algorithms_and_data_structures.Tests
 
             Assert.AreEqual(true, IsSort);
         }
+
+        [TestMethod]
+        public void Checked_Shell_Sorting()
+        {
+            IList<int> list;
+
+            list = Shell_Sort.Sort(InputData.CreateData(size));
+
+            bool IsSort = true;
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                if (list[i] > list[i + 1]) { IsSort = false; break; }
+            }
+
+            Assert.AreEqual(true, IsSort);
+        }
     }
 }
