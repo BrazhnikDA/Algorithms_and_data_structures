@@ -15,6 +15,7 @@ namespace Algorithms_and_data_structures
             Choise_Sort.Sort(InputData.CreateData(size));
             Inserts_Sort.Sort(InputData.CreateData(size));
             Quick_Sort.Sort(InputData.CreateData(size));
+            Merge_Sort.Sort(InputData.CreateData(size));
         }
     }
 }
