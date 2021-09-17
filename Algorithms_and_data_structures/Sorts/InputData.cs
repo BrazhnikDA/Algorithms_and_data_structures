@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-    internal class InputData
+    public class InputData
     {
         public static IList<int> CreateData(int size)
         {

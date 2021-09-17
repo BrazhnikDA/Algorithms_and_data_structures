@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-    internal class Bubble_Sort
+    public class Bubble_Sort
     {
         public static IList<int> Sort(IList<int> list)
         {

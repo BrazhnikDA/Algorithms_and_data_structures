@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-   internal class Choise_Sort
+    public class Choise_Sort
     {
         public static IList<int> Sort(IList<int> list)
         {

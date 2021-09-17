@@ -7,31 +7,32 @@ using System.Threading.Tasks;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-    internal class Inserts_Sort
+    public class Inserts_Sort
     {
         public static IList<int> Sort(IList<int> list)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            for (var i = 1; i < list.Count; i++)
+            for (int i = 0; i < list.Count - 1; i++)
             {
-                var key = list[i];
-                var j = i;
-                while ((j > 1) && (list[j - 1] > key))
+                var key = i + 1;
+                var temp = list[key];
+                for (int j = i + 1; j > 0; j--)
                 {
-                    var temp = list[j - 1];
-                    list[j - 1] = list[j];
-                    list[j] = temp;
-                    j--;
+                    if (temp < list[j - 1])
+                    {
+                        list[j] = list[j - 1];
+                        key = j - 1;
+                    }
                 }
-
-                list[j] = key;
+                list[key] = temp;
             }
 
             stopwatch.Stop();
             Console.WriteLine("Inserts sort is Time: " + stopwatch.ElapsedMilliseconds + "ms");
             return list;
-        }
+        }        
+        
     }
 }

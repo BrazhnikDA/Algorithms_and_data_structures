@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-    class Merge_Sort
+    public class Merge_Sort
     {
         public static IList<int> Sort(IList<int> list)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms_and_data_structures.Sorts
 {
-    internal class Quick_Sort
+    public class Quick_Sort
     {
         public static IList<int> Sort(IList<int> list)
         {

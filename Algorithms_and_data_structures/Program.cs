@@ -8,7 +8,7 @@ namespace Algorithms_and_data_structures
     {
         private const int size = 10000;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Start sorting list on " + size + " elements");
             Bubble_Sort.Sort(InputData.CreateData(size));
