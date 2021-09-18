@@ -91,6 +91,39 @@ namespace Algorithms_and_data_structures.Tests
         }
 
         [TestMethod]
+        public void Checked_MultithreadingQuick_Sorting_Even()
+        {
+            IList<int> list;
+
+            list = Multithreading_Quick_Sort.Sort(InputData.CreateData(500));
+
+            bool IsSort = true;
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                if (list[i] > list[i + 1]) { IsSort = false; break; }
+            }
+
+            Assert.AreEqual(true, IsSort);
+        }
+
+        [TestMethod]
+        public void Checked_MultithreadingQuick_Sorting_Odd()
+        {
+            IList<int> list;
+
+            list = Multithreading_Quick_Sort.Sort(InputData.CreateData(823));
+
+            bool IsSort = true;
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                if (list[i] > list[i + 1]) { IsSort = false; break; }
+            }
+
+            Assert.AreEqual(true, IsSort);
+        }
+
+
+        [TestMethod]
         public void Checked_Shell_Sorting()
         {
             IList<int> list;
