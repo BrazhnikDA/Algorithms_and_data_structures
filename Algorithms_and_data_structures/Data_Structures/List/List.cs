@@ -104,6 +104,21 @@ namespace Algorithms_and_data_structures.Data_Structures.List
             return false;
         }
 
+        // Получить значение по индексу
+        public T GetValueIndex(int index)
+        {
+            int i = 0;
+            Node<T> current = head;
+            while (current != null)
+            {
+                if (i == index)
+                    return current.Data;
+                current = current.Next;
+                i++;
+            }
+            return current.Data;
+        }
+
         // Очистка списка
         public void Clear()
         {

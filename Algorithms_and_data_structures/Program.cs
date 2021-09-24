@@ -35,6 +35,9 @@ namespace Algorithms_and_data_structures
                 Console.Write(val + " ");
             }
             Console.WriteLine();
+            
+            Console.WriteLine(list.GetValueIndex(1));
+
         }
     }
 }
