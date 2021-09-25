@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Algorithms_and_data_structures.Data_Structures
 {
-    class Stack<T> : IEnumerable<T>
+    public class Stack<T> : IEnumerable<T>
     {
         T[] mass;
         int count;
         int size;
+
+        public int Count { get => count; }
 
         // По умолчанию 10 элементов
         public Stack(int defaultSize = 10)
