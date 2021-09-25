@@ -14,6 +14,7 @@ namespace Algorithms_and_data_structures
             list.Add(a);
 
             // Проверка IEnumerable
+            Console.Write("Элементы списка - ");
             foreach (var val in list)
             {
                 Console.Write(val + " ");
@@ -22,6 +23,7 @@ namespace Algorithms_and_data_structures
 
             list.AppendFirst(55);
 
+            Console.Write("Вставка в начало 55 - ");
             foreach (var val in list)
             {
                 Console.Write(val + " ");
@@ -31,12 +33,14 @@ namespace Algorithms_and_data_structures
             list.Remove(55);
             list.Remove(6);
 
+            Console.Write("После удаления элементов 55 и 6 - ");
             foreach (var val in list)
             {
                 Console.Write(val + " ");
             }
             Console.WriteLine();
 
+            Console.Write("Значение по индексу 1 - ");
             Console.WriteLine(list.GetValueIndex(1));
         }
 
@@ -60,10 +64,37 @@ namespace Algorithms_and_data_structures
             Console.WriteLine("Верхушка - " + stack.Top());
         }
 
+        private static void TestQueue()
+        {
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+
+            queue.Dequeue();
+            queue.Dequeue();
+
+            foreach (var val in queue)
+            {
+                Console.Write(val + " ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Первый элемент - " + queue.First);
+        }
+
         static void Main(string[] args)
         {
-            //TestList();
-              TestStack();
+            Console.WriteLine("Список:");
+            TestList();
+
+            Console.WriteLine("\nСтек:");
+            TestStack();
+
+            Console.WriteLine("\nОчередь:");
+            TestQueue();
         }
     }
 }
