@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Algorithms_and_data_structures.Data_Structures.Queue;
 using System.Collections;
 
-namespace Algorithms_and_data_structures.Data_Structures
+namespace Algorithms_and_data_structures.Data_Structures.Queue
 {
     public class Queue<T> : IEnumerable<T>
     {

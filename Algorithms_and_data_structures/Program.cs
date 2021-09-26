@@ -1,5 +1,7 @@
 ﻿using Algorithms_and_data_structures.Data_Structures.List;
-using Algorithms_and_data_structures.Data_Structures;
+using Algorithms_and_data_structures.Data_Structures;   
+using Algorithms_and_data_structures.Data_Structures.Queue;
+using Algorithms_and_data_structures.Data_Structures.Tree;
 using System;
 
 namespace Algorithms_and_data_structures
@@ -85,16 +87,38 @@ namespace Algorithms_and_data_structures
             Console.WriteLine("Первый элемент - " + queue.First);
         }
 
+        private static void TestBinaryTree()
+        {
+            BinaryTree tree = new BinaryTree(8);
+            tree.Add(3);
+            tree.Add(10);
+            tree.Add(1);
+            tree.Add(14);
+            tree.Add(6);
+            tree.Add(4);
+            tree.Add(7); 
+            tree.Add(13);
+
+            Console.WriteLine("Min - {0}", tree.GetMin());
+            Console.WriteLine("Max - {0}", tree.GetMax());
+
+            Console.WriteLine("Find 6 - {0}", tree.IsFind(tree, 6));
+            Console.WriteLine("Find 6 - {0}", tree.IsFind(tree, 6));
+
+            tree.Print(tree);
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Список:");
-            TestList();
+            //Console.WriteLine("Список:");
+            //TestList();
 
-            Console.WriteLine("\nСтек:");
-            TestStack();
+            //Console.WriteLine("\nСтек:");
+            //TestStack();
 
-            Console.WriteLine("\nОчередь:");
-            TestQueue();
+            //Console.WriteLine("\nОчередь:");
+            //TestQueue();
+
+            TestBinaryTree();
         }
     }
 }
