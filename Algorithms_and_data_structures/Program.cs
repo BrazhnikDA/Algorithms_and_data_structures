@@ -114,10 +114,12 @@ namespace Algorithms_and_data_structures
             Console.WriteLine("Find - 0 = {0}", tree.IsFind(tree, 0));
             Console.WriteLine("Find - 14 = {0}", tree.IsFind(tree, 14));
 
-            tree.Print(tree);
+            tree.Print(Console.WindowWidth / 2, 11, tree);
             tree.DeleteNode(30, tree);
+            tree.DeleteNode(1, tree);
+            tree.DeleteNode(7, tree);
             Console.WriteLine();
-            tree.Print(tree);
+            tree.Print(Console.WindowWidth / 2, 30, tree);
         }
         static void Main(string[] args)
         {

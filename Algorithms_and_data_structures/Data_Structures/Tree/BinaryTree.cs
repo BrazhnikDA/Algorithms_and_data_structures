@@ -143,7 +143,6 @@ namespace Algorithms_and_data_structures.Data_Structures.Tree
                     return false;
                 }
             }
-            return false;
         }
 
         public void Clear()
@@ -166,12 +165,25 @@ namespace Algorithms_and_data_structures.Data_Structures.Tree
         {
             if (tmp != null)
             {
-                Console.WriteLine(tmp.data);
+                Console.Write("root: " + tmp.data);
+                //Console.Write("L: ");
                 Print(tmp.right);
+                //Console.Write("R: ");
                 Print(tmp.left);
             }
         }
 
+        public void Print(int x, int y, BinaryTree root, int delta = 0) // Указатель курсора по x и y
+        {
+            if (root != null)
+            {
+                if (delta == 0) delta = x / 2;
+                Console.SetCursorPosition(x, y);
+                Console.Write(root.data);
+                Print(x - delta, y + 3, root.left, delta / 2);
+                Print(x + delta, y + 3, root.right, delta / 2);
+            }
 
+        }
     }
 }
