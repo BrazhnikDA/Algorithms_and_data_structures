@@ -102,8 +102,14 @@ namespace Algorithms_and_data_structures
             Console.WriteLine("Min - {0}", tree.GetMin());
             Console.WriteLine("Max - {0}", tree.GetMax());
 
-            Console.WriteLine("Find 6 - {0}", tree.IsFind(tree, 6));
-            Console.WriteLine("Find 6 - {0}", tree.IsFind(tree, 6));
+            Console.WriteLine("Find - 6 = {0}", tree.IsFind(tree, 6));
+            Console.WriteLine("Find - 11 = {0}", tree.IsFind(tree, 11));
+            Console.WriteLine("Find - 1 = {0}", tree.IsFind(tree, 1));
+            Console.WriteLine("Find - 13 = {0}", tree.IsFind(tree, 13));
+            Console.WriteLine("Find - 55 = {0}", tree.IsFind(tree, 55));
+            Console.WriteLine("Find - 100 = {0}", tree.IsFind(tree, 100));
+            Console.WriteLine("Find - 0 = {0}", tree.IsFind(tree, 0));
+            Console.WriteLine("Find - 14 = {0}", tree.IsFind(tree, 14));
 
             tree.Print(tree);
         }
