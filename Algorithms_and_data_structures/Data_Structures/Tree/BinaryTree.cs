@@ -67,21 +67,51 @@ namespace Algorithms_and_data_structures.Data_Structures.Tree
             return copy.data;
         }
 
-        public bool IsFind(BinaryTree tmp, int _find)
+        public BinaryTree DeleteNode(int deleteData, BinaryTree root)
+        {
+            if (root == null)
+                return root;
+            if (deleteData < root.data)
+            {
+                root.left = DeleteNode(deleteData, root.left);
+            }
+            else if (deleteData > root.data)
+            {
+                root.right = DeleteNode(deleteData, root.right);
+            }
+            else if (root.left != null && root.right != null)
+            {
+                root.data = GetMin();
+                root.right = DeleteNode(root.data, root.right);
+            }
+            else if (root.left != null)
+            {
+                return root.left;
+            }
+            else
+            {
+                return root.right;
+            }
+
+            return root;
+
+        }
+
+        public bool IsFind(BinaryTree tmp, int find)
         {
             bool IsEntry;
             while (true)
             {
                 IsEntry = false;
-                if (tmp.data == _find)
+                if (tmp.data == find)
                     return true;
-                while (_find > tmp.data)
+                while (find > tmp.data)
                 {
                     IsEntry = true;
                     if (tmp.right != null)
                     {
                         tmp = tmp.right;
-                        if (tmp.data == _find)
+                        if (tmp.data == find)
                         {
                             return true;
                         }
@@ -92,13 +122,13 @@ namespace Algorithms_and_data_structures.Data_Structures.Tree
                         break;
                     }
                 }
-                while (_find < tmp.data)
+                while (find < tmp.data)
                 {
                     IsEntry = true;
                     if (tmp.left != null)
                     {
                         tmp = tmp.left;
-                        if (tmp.data == _find)
+                        if (tmp.data == find)
                         {
                             return true;
                         }

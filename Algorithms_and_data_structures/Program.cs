@@ -98,6 +98,9 @@ namespace Algorithms_and_data_structures
             tree.Add(4);
             tree.Add(7); 
             tree.Add(13);
+            tree.Add(20);
+            tree.Add(30);
+            tree.Add(40);
 
             Console.WriteLine("Min - {0}", tree.GetMin());
             Console.WriteLine("Max - {0}", tree.GetMax());
@@ -111,6 +114,9 @@ namespace Algorithms_and_data_structures
             Console.WriteLine("Find - 0 = {0}", tree.IsFind(tree, 0));
             Console.WriteLine("Find - 14 = {0}", tree.IsFind(tree, 14));
 
+            tree.Print(tree);
+            tree.DeleteNode(30, tree);
+            Console.WriteLine();
             tree.Print(tree);
         }
         static void Main(string[] args)
